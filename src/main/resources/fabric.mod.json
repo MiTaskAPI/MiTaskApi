@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "mitaskapi",
+  "version": "${version}",
+  "name": "MitaskAPI",
+  "description": "MiTaskAPI",
+  "authors": [
+    "MiTaskTEAM"
+  ],
+  "contact": {
+    "website": "https://vk.com/mrmasrozytlive"
+  },
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.mitask.LightOverlayImpl::init"
+    ],
+    "modmenu": [
+      "net.mitask.LOModMenuEntry"
+    ]
+  },
+  "mixins": [
+    "mitaskapi.mixins.json"
+  ],
+  "accessWidener": "mitask.accesswidener",
+  "custom": {
+    "modmenu:clientsideOnly": true
+  },
+  "depends": {
+    "fabricloader": ">=0.11.1",
+    "fabric": "*",
+    "minecraft": "1.16.4",
+    "architectury": ">=1.2.67"
+  }
+}
